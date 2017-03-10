@@ -1,0 +1,58 @@
+<!--
+  Generated template for the Booking page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ ('ONLINE_BOOKING' | translate) | uppercase }}</ion-title>
+    <!--<ion-buttons>-->
+      <!--<language-select></language-select>-->
+    <!--</ion-buttons>-->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item-group inset class="booking-list">
+    <button
+      ion-item
+      [navPush]="employeesPage"
+      [navParams]="1">
+      {{ ('EMPLOYEE' | translate) | uppercase }}
+
+      <p *ngIf="savedEmployee">{{ savedEmployee.firstname }} {{ savedEmployee.lastname }}</p>
+      <ion-icon
+        *ngIf="savedEmployee"
+        (click)="removeSavedEmployee($event)"
+        item-right
+        ios="ios-close"
+        md="md-close"></ion-icon>
+
+    </button>
+    <button
+      ion-item
+      [navPush]="servicesPage">
+      {{ ('SERVICE' | translate) | uppercase }}
+
+      <p *ngIf="savedService">{{ savedService?.nameCategoty }} {{ savedService?.service?.name }}</p>
+      <ion-icon
+        *ngIf="savedService"
+        (click)="removeSavedService($event)"
+        item-right
+        ios="ios-close"
+        md="md-close"></ion-icon>
+
+    </button>
+    <button
+      ion-item
+      [navPush]="timePage"
+      [navParams]="1">
+      {{ ('DATE_AND_TIME' | translate) | uppercase }}
+    </button>
+  </ion-item-group>
+  <button ion-button block disabled="{{(savedEmployee && savedService) ? '' : 'disabled'}}"> {{ ('MAKE_VISIT' | translate) | uppercase }}</button>
+</ion-content>

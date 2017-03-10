@@ -1,0 +1,14 @@
+<form [formGroup]="languageForm" (ngSubmit)="onSubmit()">
+  <ion-item no-lines>
+    <ion-select
+      formControlName="languageControl"
+      okText="{{ ('OK' | translate) | uppercase }}"
+      cancelText="{{ ('CANCEL' | translate) | uppercase }}"
+      [selectOptions]="languageAlertOpts"
+      (ionChange)="onChangeLang($event)">
+      <ion-option
+        *ngFor="let lang of languages"
+        value="{{ lang }}">{{ lang | uppercase }}</ion-option>
+    </ion-select>
+  </ion-item>
+</form>

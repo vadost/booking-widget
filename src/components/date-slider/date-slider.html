@@ -1,0 +1,27 @@
+<div>
+  <ion-grid>
+    <ion-row text-center ver>
+      <ion-col col-3
+         (click)="showPreviousDay()">
+        <ion-icon
+          class="arrow-icon"
+          name="ios-arrow-back"
+          padding-vertical></ion-icon>
+      </ion-col>
+      <ion-col col-6>
+        <div class="current-date">
+          <div class="mounth">{{ (('MOUNTH_' + mounth) | translate) }}</div>
+          <div class="number">{{ dayNumber }}</div>
+          <div class="day">{{ (('DAY_SHORT_' + dayName) | translate) }}</div>
+        </div>
+      </ion-col>
+      <ion-col col-3
+        (click)="showNextDay()">
+        <ion-icon
+          class="arrow-icon"
+          name="ios-arrow-forward"
+          padding-vertical></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ ('CHOICE_SERVICE' | translate) | uppercase }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar></ion-searchbar>
+  <ion-item-group *ngFor="let service of services">
+    <ion-item-divider class="category">{{service.nameCategoty}}</ion-item-divider>
+    <ion-item
+      *ngFor="let item of service.services"
+      (click)="saveService({service: item, nameCategoty: service.nameCategoty})">
+      {{item.name}}
+      <p>{{item.price}}</p>
+    </ion-item>
+  </ion-item-group>
+</ion-content>
