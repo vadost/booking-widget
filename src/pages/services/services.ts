@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataSerives } from '../../providers/data.serives';
+import { DataService } from '../../providers/data.service';
 import { BookingDataService } from '../../providers/booking-data.service';
 import { NavController } from 'ionic-angular';
 
@@ -11,7 +11,7 @@ export class ServicesPage {
   services;
 
   constructor(private navCtrl: NavController,
-              private dataService: DataSerives,
+              private dataService: DataService,
               private bookingDataService: BookingDataService) {
     this.dataService.getServices().subscribe(
       services => {

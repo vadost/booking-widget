@@ -23,8 +23,15 @@
           <p>
             {{ item.address }}
           </p>
+          <ion-icon class="icon-arrow" name="ios-arrow-forward"></ion-icon>
         </button>
       </ion-card-content>
     </ion-card>
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>{{ ('POWER_BY' | translate) | uppercase }} <a style="text-decoration: underline">SKYBOOKING</a></p>
+  </ion-toolbar>
+</ion-footer>

@@ -3,7 +3,6 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TranslateService } from '@ngx-translate/core';
-import { TimePage } from '../pages/time/time';
 import { HomePage } from '../pages/home/home';
 
 
@@ -12,7 +11,6 @@ import { HomePage } from '../pages/home/home';
 })
 export class MyApp {
   rootPage = HomePage;
-  // rootPage = TimePage;
 
   constructor(platform: Platform,
               translate: TranslateService) {

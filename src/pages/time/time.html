@@ -14,4 +14,23 @@
 
 <ion-content padding>
   <app-date-slider (onChangeDate)="onChangeDate($event)"></app-date-slider>
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        text-center
+        col-3
+        *ngFor="let time of bookTimes">
+          <button
+            (click)="onSaveTime(time.time)"
+            ion-button
+            color="light">{{ time.time }}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>{{ ('POWER_BY' | translate) | uppercase }} <a style="text-decoration: underline">SKYBOOKING</a></p>
+  </ion-toolbar>
+</ion-footer>

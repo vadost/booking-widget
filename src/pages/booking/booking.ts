@@ -4,6 +4,7 @@ import { EmployeesPage } from '../employees/employees';
 import { ServicesPage } from '../services/services';
 import { TimePage } from '../time/time';
 import { BookingDataService } from '../../providers/booking-data.service';
+import { VisitPage } from '../visit/visit';
 
 @Component({
   selector: 'page-booking',
@@ -15,6 +16,7 @@ export class BookingPage {
   timePage = TimePage;
   savedEmployee;
   savedService;
+  savedDate;
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -25,6 +27,7 @@ export class BookingPage {
   ionViewWillEnter() {
     this.savedEmployee = this.bookingDataService.getEmployee();
     this.savedService = this.bookingDataService.getService();
+    this.savedDate = this.bookingDataService.getDate();
   }
 
   removeSavedEmployee(event) {
@@ -37,6 +40,16 @@ export class BookingPage {
     event.stopPropagation();
     this.bookingDataService.removeService();
     this.savedService = null;
+  }
+
+  removeSavedDate(event) {
+    event.stopPropagation();
+    this.bookingDataService.removeDate();
+    this.savedDate = null;
+  }
+
+  makeVisit() {
+    this.navCtrl.push(VisitPage);
   }
 
 }

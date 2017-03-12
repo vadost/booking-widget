@@ -6,8 +6,10 @@ export class BookingDataService {
   employee;
   service;
   time;
+  date;
 
   getEmployee() {
+    console.log('getEmployee', this.employee);
     return this.employee;
   }
 
@@ -25,7 +27,6 @@ export class BookingDataService {
   }
 
   setService(service) {
-    console.log('setService', this.service);
     this.service = service;
   }
 
@@ -33,16 +34,18 @@ export class BookingDataService {
     this.service = null;
   }
 
-  getTime() {
-    return this.time;
+  getDate() {
+    console.log('getDate', this.date);
+    return this.date;
   }
 
-  setTime(time) {
-    this.time = time;
+  setDate(selectedDate: Date, time: string) {
+
+    this.date = {'selectedDate': selectedDate, 'time': time};
   }
 
-  removeTime(time) {
-    this.time = null;
+  removeDate() {
+    this.date = null;
   }
 
 

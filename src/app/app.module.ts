@@ -7,7 +7,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { DataSerives } from '../providers/data.serives';
+import { DataService } from '../providers/data.service';
 import { MapComponent } from '../components/map/map';
 import { BookingPage } from '../pages/booking/booking';
 import { LanguageSelect } from '../components/language-select/language-select';
@@ -16,6 +16,8 @@ import { ServicesPage } from '../pages/services/services';
 import { TimePage } from '../pages/time/time';
 import { BookingDataService } from '../providers/booking-data.service';
 import { DateSliderComponent } from '../components/date-slider/date-slider';
+import { VisitPage } from '../pages/visit/visit';
+import { BookingSuccessPage } from '../pages/booking-success/booking-success';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -31,6 +33,8 @@ export function HttpLoaderFactory(http: Http) {
     EmployeesPage,
     ServicesPage,
     TimePage,
+    VisitPage,
+    BookingSuccessPage,
     MapComponent,
     LanguageSelect,
     DateSliderComponent
@@ -53,8 +57,10 @@ export function HttpLoaderFactory(http: Http) {
     BookingPage,
     EmployeesPage,
     ServicesPage,
-    TimePage
+    TimePage,
+    VisitPage,
+    BookingSuccessPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, DataSerives, BookingDataService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, DataService, BookingDataService]
 })
 export class AppModule {}

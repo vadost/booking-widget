@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs';
 
 @Injectable()
-export class DataSerives {
+export class DataService {
   data = [
     {
       id: 1,
@@ -175,9 +175,58 @@ export class DataSerives {
     }
   ];
 
-  constructor() {
-    console.log('Hello Data Provider', this.data);
-  }
+  bookTimes = [
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '10:15'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '10:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '11:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '12:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '13:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '14:15'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '15:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '16:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '17:30'
+    },
+    {
+      datetime: '2017-03-11T20:45:00+04:00',
+      seance_length: 900,
+      time: '18:45'
+    }
+  ];
 
   getFilials() {
     return Observable.of(this.data).delay(10);
@@ -189,6 +238,10 @@ export class DataSerives {
 
   getServices() {
     return Observable.of(this.services).delay(10);
+  }
+
+  getbookTimes() {
+    return Observable.of(this.bookTimes).delay(10);
   }
 
 

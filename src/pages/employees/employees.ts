@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DataSerives } from '../../providers/data.serives';
+import { DataService } from '../../providers/data.service';
 import { BookingDataService } from '../../providers/booking-data.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class EmployeesPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private dataService: DataSerives,
+              private dataService: DataService,
               private bookingDataService: BookingDataService) {
     dataService.getEmployees().subscribe(
       employees => this.employees = employees

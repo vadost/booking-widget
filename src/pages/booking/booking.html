@@ -52,7 +52,25 @@
       [navPush]="timePage"
       [navParams]="1">
       {{ ('DATE_AND_TIME' | translate) | uppercase }}
+
+      <p *ngIf="savedDate">{{ savedDate?.time }}</p>
+      <ion-icon
+        *ngIf="savedDate"
+        (click)="removeSavedDate($event)"
+        item-right
+        ios="ios-close"
+        md="md-close"></ion-icon>
+
     </button>
   </ion-item-group>
-  <button ion-button block disabled="{{(savedEmployee && savedService) ? '' : 'disabled'}}"> {{ ('MAKE_VISIT' | translate) | uppercase }}</button>
+  <button
+    (click)="makeVisit()"
+    ion-button block disabled="{{(savedEmployee && savedService && savedDate) ? '' : 'disabled'}}">
+    {{ ('MAKE_VISIT' | translate) | uppercase }}</button>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>{{ ('POWER_BY' | translate) | uppercase }} <a style="text-decoration: underline">SKYBOOKING</a></p>
+  </ion-toolbar>
+</ion-footer>

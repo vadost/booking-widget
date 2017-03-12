@@ -44,7 +44,6 @@ export class LanguageSelect {
   }
 
   onChangeLang(e) {
-    console.log('event', e, this.subTitle);
     this.setLanguage(e);
   }
 
