@@ -1,7 +1,5 @@
 import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
 
-declare var google;
-
 @Component({
   selector: 'app-map',
   templateUrl: 'map.html'
@@ -32,6 +30,12 @@ export class MapComponent implements OnInit{
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    let marker = new google.maps.Marker({
+      position: {lat: 50.450592, lng: 30.523078},
+      map: this.map,
+      title: 'Hello World!'
+    });
+    marker.setMap(this.map);
   }
 
 }
