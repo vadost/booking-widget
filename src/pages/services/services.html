@@ -9,8 +9,10 @@
 
 
 <ion-content padding>
-  <ion-searchbar></ion-searchbar>
-  <ion-item-group *ngFor="let service of services">
+  <ion-searchbar class="service-content"></ion-searchbar>
+  <ion-item-group
+    class="service-content"
+    *ngFor="let service of services">
     <ion-item-divider class="category">{{service.nameCategoty}}</ion-item-divider>
     <ion-item
       *ngFor="let item of service.services"

@@ -17,9 +17,13 @@
 
 
 <ion-content padding>
-  <ion-item-group inset class="booking-list">
+  <ion-item-group
+    text-center
+    inset
+    class="booking-list">
     <button
       ion-item
+      class="booking-item"
       [navPush]="employeesPage"
       [navParams]="1">
       {{ ('EMPLOYEE' | translate) | uppercase }}
@@ -35,6 +39,7 @@
     </button>
     <button
       ion-item
+      class="booking-item"
       [navPush]="servicesPage">
       {{ ('SERVICE' | translate) | uppercase }}
 
@@ -49,6 +54,7 @@
     </button>
     <button
       ion-item
+      class="booking-item"
       [navPush]="timePage"
       [navParams]="1">
       {{ ('DATE_AND_TIME' | translate) | uppercase }}
@@ -62,11 +68,12 @@
         md="md-close"></ion-icon>
 
     </button>
+    <button
+      class="submit-btn"
+      (click)="makeVisit()"
+      ion-button block disabled="{{(savedEmployee && savedService && savedDate) ? '' : 'disabled'}}">
+      {{ ('MAKE_VISIT' | translate) | uppercase }}</button>
   </ion-item-group>
-  <button
-    (click)="makeVisit()"
-    ion-button block disabled="{{(savedEmployee && savedService && savedDate) ? '' : 'disabled'}}">
-    {{ ('MAKE_VISIT' | translate) | uppercase }}</button>
 </ion-content>
 
 <ion-footer>

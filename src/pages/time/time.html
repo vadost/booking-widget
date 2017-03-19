@@ -7,14 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>time</ion-title>
+    <ion-title>{{ ('SELECT_DATE' | translate) | uppercase }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <app-date-slider (onChangeDate)="onChangeDate($event)"></app-date-slider>
-  <ion-grid>
+  <app-date-slider class="time-content"
+    (onChangeDate)="onChangeDate($event)"></app-date-slider>
+  <ion-grid class="time-content">
     <ion-row>
       <ion-col
         text-center

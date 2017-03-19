@@ -51,7 +51,9 @@ export class HomePage {
     );
   }
 
-  onItemClicked(item) {
+  onItemClicked(e, item) {
+    e.preventDefault();
+    e.stopPropagation();
     this.navCtrl.push(BookingPage, {filial: item});
   }
 

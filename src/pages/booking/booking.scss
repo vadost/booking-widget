@@ -1,5 +1,18 @@
 page-booking {
+
   .booking-list{
     padding: 100px 0px 50px 0px;
+    margin: 10px auto;
+    max-width: 600px;
   }
+
+  .booking-item {
+    padding-left: 0px;
+  }
+
+  .submit-btn {
+    max-width: 600px;
+    margin-top: 50px;
+  }
+
 }

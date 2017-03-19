@@ -11,11 +11,11 @@
 <ion-content padding>
   <h3 text-center>{{ ('CHOOSE_FILIAL' | translate) | uppercase }}</h3>
   <p text-center>{{ ('ONLINE_BOOKING' | translate) | uppercase }}</p>
-  <ion-list>
+  <ion-list text-center>
     <ion-card
       class="card-item"
       *ngFor="let item of data"
-      (click)="onItemClicked(item)">
+      (click)="onItemClicked($event, item)">
       <ion-card-content>
         <app-map class="map"></app-map>
         <button ion-item>

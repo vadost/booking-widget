@@ -18,8 +18,10 @@
   "REMINDER": "Напоминание",
   "DONT_SEND": "Не отправлять",
   "RECORD_CREATED": "Запись создана",
-  "MAKE_APPOINTMENT_AGAIN": "Make an appointment again",
+  "MAKE_APPOINTMENT_AGAIN": "Записаться на прием снова",
   "POWER_BY": "Работает на",
+  "CHOICE_EMPLOYEE": "Выбор сотрудника",
+  "SELECT_DATE": "Выбор даты",
 
   "REMIND_1": "За 1 час до визита",
   "REMIND_2": "За 2 часа до визита",

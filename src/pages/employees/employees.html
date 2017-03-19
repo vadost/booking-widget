@@ -7,14 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>employees</ion-title>
+    <ion-title>{{ ('CHOICE_EMPLOYEE' | translate) | uppercase }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
+  <ion-list
+    class="employee-list"
+    text-center>
     <ion-item
       class="employee-item"
       *ngFor="let employee of employees"

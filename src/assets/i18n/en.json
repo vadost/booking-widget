@@ -17,7 +17,10 @@
   "ENTRY_COMMENT": "Comment on the entry",
   "REMINDER": "Reminder",
   "RECORD_CREATED": "Record created",
+  "MAKE_APPOINTMENT_AGAIN": "Make an appointment again",
   "POWER_BY": "Power by",
+  "CHOICE_EMPLOYEE": "Choice of employee",
+  "SELECT_DATE": "Select a date",
 
   "DONT_SEND": "Don't send",
   "REMIND_1": "1 hour before the visit",

@@ -14,7 +14,9 @@
 
 
 <ion-content padding>
-  <ion-card *ngIf="(savedEmployee && savedService && savedDate)">
+  <ion-card
+    class="visit-content"
+    *ngIf="(savedEmployee && savedService && savedDate)">
     <ion-card-header>
       {{ savedService.nameCategoty }} {{ savedService.service.name }}
       <p>{{savedService.service.price}}</p>
@@ -24,7 +26,9 @@
       <p>{{ savedDate.time }}</p>
     </ion-card-content>
   </ion-card>
-  <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+  <form
+    class="visit-content"
+    [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
     <ion-list>
 
       <ion-item>
